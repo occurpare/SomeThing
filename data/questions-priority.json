@@ -1,0 +1,1507 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-02-20",
+    "combinations": 10,
+    "tests_per_combination": 3,
+    "total_question_sets": 30,
+    "priority": "Tier 1 (20대 중심)"
+  },
+  "combinations": {
+    "20F_D": {
+      "name": "20대초반_여성_직진파",
+      "profile": "대학생, 적극적, 설렘 추구, 바로 행동",
+      "sum": [
+        {
+          "text": "최근 일주일, 상대가 먼저 연락온 횟수는?",
+          "options": [
+            {"text": "매일 와! 먼저 밥먹자고도 해", "score": 10},
+            {"text": "3~4회 정도", "score": 7},
+            {"text": "1~2회", "score": 4},
+            {"text": "내가 먼저 하는 편", "score": 0}
+          ]
+        },
+        {
+          "text": "함께 있을 때 상대의 눈빛은?",
+          "options": [
+            {"text": "따뜻하게 나만 봐", "score": 10},
+            {"text": "편안하게 웃어", "score": 7},
+            {"text": "그냥 평범해", "score": 4},
+            {"text": "피하는 느낌", "score": 0}
+          ]
+        },
+        {
+          "text": "친구들이 우리 사이를?",
+          "options": [
+            {"text": "썸남썸녀라고 놀림", "score": 10},
+            {"text": "잘 어울린다고 함", "score": 7},
+            {"text": "모르겠다고 함", "score": 4},
+            {"text": "그냥 친구라고 함", "score": 0}
+          ]
+        },
+        {
+          "text": "내가 적극적으로 다가가면 상대는?",
+          "options": [
+            {"text": "더 적극적으로 화답", "score": 10},
+            {"text": "받아주는 편", "score": 7},
+            {"text": "애매하게 반응", "score": 4},
+            {"text": "피하거나 부담", "score": 0}
+          ]
+        },
+        {
+          "text": "SNS에서 서로의 소식을?",
+          "options": [
+            {"text": "바로보고 댓글/답장", "score": 10},
+            {"text": "자주 체크함", "score": 7},
+            {"text": "가끔 봄", "score": 4},
+            {"text": "관심 없어 보임", "score": 0}
+          ]
+        },
+        {
+          "text": "다음 만남 약속은?",
+          "options": [
+            {"text": "이번 만남 끝날 때 바로 잡음", "score": 10},
+            {"text": "서로 제안함", "score": 7},
+            {"text": "애매하게 넘어감", "score": 4},
+            {"text": "정하지 않음", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "이 사람 생각나는 빈도는?",
+          "options": [
+            {"text": "계속 생각남", "score": 10},
+            {"text": "자주 생각남", "score": 7},
+            {"text": "가끔 생각남", "score": 4},
+            {"text": "잘 안 남", "score": 0}
+          ]
+        },
+        {
+          "text": "연락 왔을 때 내 기분은?",
+          "options": [
+            {"text": "심장 뛰며 설레", "score": 10},
+            {"text": "기분 좋아짐", "score": 7},
+            {"text": "그냥 그럼", "score": 4},
+            {"text": "귀찮음", "score": 0}
+          ]
+        },
+        {
+          "text": "이 사람과 미래를 상상해본 적?",
+          "options": [
+            {"text": "자주 상상함", "score": 10},
+            {"text": "몇 번 상상함", "score": 7},
+            {"text": "거의 없음", "score": 4},
+            {"text": "전혀 없음", "score": 0}
+          ]
+        },
+        {
+          "text": "다른 이성 언급 시 내 심정은?",
+          "options": [
+            {"text": "질투나서 신경쓰임", "score": 10},
+            {"text": "조금 씁쓸함", "score": 7},
+            {"text": "그냥 들음", "score": 4},
+            {"text": "관심 없음", "score": 0}
+          ]
+        },
+        {
+          "text": "고백하고 싶은 충동이?",
+          "options": [
+            {"text": "지금 당장 하고 싶음", "score": 10},
+            {"text": "언젠가 하고 싶음", "score": 7},
+            {"text": "좀 더 지켜보고 싶음", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 나를 볼 때 표정은?",
+          "options": [
+            {"text": "눈에서 미소가", "score": 10},
+            {"text": "밝게 웃음", "score": 7},
+            {"text": "평범함", "score": 4},
+            {"text": "무표정", "score": 0}
+          ]
+        },
+        {
+          "text": "내 이야기를 기억하나요?",
+          "options": [
+            {"text": "작은 것도 다 기억", "score": 10},
+            {"text": "주요 건 기억", "score": 7},
+            {"text": "가끔 기억", "score": 4},
+            {"text": "잘 못 기억", "score": 0}
+          ]
+        },
+        {
+          "text": "내게 시간을 투자하나요?",
+          "options": [
+            {"text": "바쁘게 일정 조정함", "score": 10},
+            {"text": "가능한 만큼 냄", "score": 7},
+            {"text": "제한적으로 냄", "score": 4},
+            {"text": "잘 안 냄", "score": 0}
+          ]
+        },
+        {
+          "text": "친구들에게 나를 언급하나요?",
+          "options": [
+            {"text": "자주 좋게 언급", "score": 10},
+            {"text": "가끔 말함", "score": 7},
+            {"text": "잘 안함", "score": 4},
+            {"text": "언급 없음", "score": 0}
+          ]
+        },
+        {
+          "text": "나를 위한 배려가 있나요?",
+          "options": [
+            {"text": "세심하게 챙김", "score": 10},
+            {"text": "기본적 챙김", "score": 7},
+            {"text": "가끔 챙김", "score": 4},
+            {"text": "잘 안 챙김", "score": 0}
+          ]
+        }
+      ]
+    },
+    "20F_C": {
+      "name": "20대초반_여성_신중파",
+      "profile": "대학생, 신중함, 관찰 중시, 확실한 신호 필요",
+      "sum": [
+        {
+          "text": "최근 한 달, 연락 패턴이 일관되나요?",
+          "options": [
+            {"text": "매우 규칙적이고 꾸준함", "score": 10},
+            {"text": "대체로 꾸준함", "score": 7},
+            {"text": "불규칙함", "score": 4},
+            {"text": "드문드문함", "score": 0}
+          ]
+        },
+        {
+          "text": "시간이 지날수록 상대의 태도는?",
+          "options": [
+            {"text": "점점 더 좋아짐", "score": 10},
+            {"text": "유지되고 있음", "score": 7},
+            {"text": "애매함", "score": 4},
+            {"text": "멀어지는 느낌", "score": 0}
+          ]
+        },
+        {
+          "text": "상대의 작은 행동 변화를 느끼나요?",
+          "options": [
+            {"text": "따뜻해진 게 느껴짐", "score": 10},
+            {"text": "관심 있다는 느낌", "score": 7},
+            {"text": "변화 모르겠음", "score": 4},
+            {"text": "차가워진 느낌", "score": 0}
+          ]
+        },
+        {
+          "text": "주변 친구들이 보기에 우리는?",
+          "options": [
+            {"text": "분명 썸이라고 함", "score": 10},
+            {"text": "좋아하는 거 같다고 함", "score": 7},
+            {"text": "모르겠다고 함", "score": 4},
+            {"text": "그냥 친구라고 함", "score": 0}
+          ]
+        },
+        {
+          "text": "상대가 나에게 보이는 일관성은?",
+          "options": [
+            {"text": "언제나 진심으로 대함", "score": 10},
+            {"text": "대체로 일관됨", "score": 7},
+            {"text": "때때로 다름", "score": 4},
+            {"text": "일관성 없음", "score": 0}
+          ]
+        },
+        {
+          "text": "확실한 호감 신호를 받았나요?",
+          "options": [
+            {"text": "명확한 신호 여러 개", "score": 10},
+            {"text": "그럴싸한 신호 있음", "score": 7},
+            {"text": "애매한 신호만", "score": 4},
+            {"text": "신호를 못 느낌", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "이 사람에 대해 확인한 정보는?",
+          "options": [
+            {"text": "성격, 가치관, 취향 다 파악", "score": 10},
+            {"text": "주요 정보는 알음", "score": 7},
+            {"text": "겉모습만 앎", "score": 4},
+            {"text": "잘 모름", "score": 0}
+          ]
+        },
+        {
+          "text": "시간 투자 대비 감정은?",
+          "options": [
+            {"text": "깊은 애정 생김", "score": 10},
+            {"text": "호감이 깊어짐", "score": 7},
+            {"text": "그냥 그럼", "score": 4},
+            {"text": "후회됨", "score": 0}
+          ]
+        },
+        {
+          "text": "확신이 드나요?",
+          "options": [
+            {"text": "매우 확실함", "score": 10},
+            {"text": "꽤 확실함", "score": 7},
+            {"text": "반반임", "score": 4},
+            {"text": "불확실함", "score": 0}
+          ]
+        },
+        {
+          "text": "신뢰할 수 있나요?",
+          "options": [
+            {"text": "완전히 신뢰함", "score": 10},
+            {"text": "대체로 신뢰함", "score": 7},
+            {"text": "조금 신뢰함", "score": 4},
+            {"text": "신뢰 못함", "score": 0}
+          ]
+        },
+        {
+          "text": "실패했을 때 회복 가능성은?",
+          "options": [
+            {"text": "감수할 수 있음", "score": 10},
+            {"text": "도전해볼 만함", "score": 7},
+            {"text": "걱정됨", "score": 4},
+            {"text": "무서움", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 나를 꾸준히 지켜보나요?",
+          "options": [
+            {"text": "항상 신경 씀", "score": 10},
+            {"text": "자주 신경 씀", "score": 7},
+            {"text": "가끔 신경 씀", "score": 4},
+            {"text": "안 씀", "score": 0}
+          ]
+        },
+        {
+          "text": "약속을 잘 지키나요?",
+          "options": [
+            {"text": "항상 지킴", "score": 10},
+            {"text": "대체로 지킴", "score": 7},
+            {"text": "가끔 미룸", "score": 4},
+            {"text": "자주 어김", "score": 0}
+          ]
+        },
+        {
+          "text": "내가 힘들 때 위로해주나요?",
+          "options": [
+            {"text": "먼저 알아채고 챙김", "score": 10},
+            {"text": "위로해줌", "score": 7},
+            {"text": "물어보면 챙김", "score": 4},
+            {"text": "잘 몰라줌", "score": 0}
+          ]
+        },
+        {
+          "text": "진심을 보여주나요?",
+          "options": [
+            {"text": "속내를 터놓음", "score": 10},
+            {"text": "진심을 보임", "score": 7},
+            {"text": "표면적 대화", "score": 4},
+            {"text": "가식적임", "score": 0}
+          ]
+        },
+        {
+          "text": "오랜 시간 투자하나요?",
+          "options": [
+            {"text": "꾸준히 시간 냄", "score": 10},
+            {"text": "투자하는 편", "score": 7},
+            {"text": "제한적임", "score": 4},
+            {"text": "짧게만 냄", "score": 0}
+          ]
+        }
+      ]
+    },
+    "20F_P": {
+      "name": "20대초반_여성_감성파",
+      "profile": "대학생, 감성적, 분위기 중시, 설렘 추구",
+      "sum": [
+        {
+          "text": "함께 있을 때 분위기는?",
+          "options": [
+            {"text": "완전 로맨틱함", "score": 10},
+            {"text": "설레고 따뜻함", "score": 7},
+            {"text": "편안함", "score": 4},
+            {"text": "어색함", "score": 0}
+          ]
+        },
+        {
+          "text": "상대 눈빛에서 느껴지는 감정은?",
+          "options": [
+            {"text": "따뜻한 애정", "score": 10},
+            {"text": "관심과 호감", "score": 7},
+            {"text": "친근함", "score": 4},
+            {"text": "무관심", "score": 0}
+          ]
+        },
+        {
+          "text": "특별한 순간이 있었나요?",
+          "options": [
+            {"text": "여러 번 설렘", "score": 10},
+            {"text": "한 번씩 설렘", "score": 7},
+            {"text": "딱히 없음", "score": 4},
+            {"text": "불편했음", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적으로 연결되나요?",
+          "options": [
+            {"text": "마음이 통함", "score": 10},
+            {"text": "공감됨", "score": 7},
+            {"text": "그냥 그럼", "score": 4},
+            {"text": "동떨어짐", "score": 0}
+          ]
+        },
+        {
+          "text": "분위기가 살때가 있나요?",
+          "options": [
+            {"text": "자주 로맨틱함", "score": 10},
+            {"text": "가끔 그럴 때 있음", "score": 7},
+            {"text": "거의 없음", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "SNS나 문자에서 감정이 느껴지나요?",
+          "options": [
+            {"text": "따뜻함이 묻어남", "score": 10},
+            {"text": "신경 쓴 느낌", "score": 7},
+            {"text": "평범함", "score": 4},
+            {"text": "냉정함", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "이 사람 생각하면 기분은?",
+          "options": [
+            {"text": "행복하고 설레", "score": 10},
+            {"text": "기분 좋아짐", "score": 7},
+            {"text": "그냥 그럼", "score": 4},
+            {"text": "불안함", "score": 0}
+          ]
+        },
+        {
+          "text": "감정 기복이 심한가요?",
+          "options": [
+            {"text": "극과 극으로 움직임", "score": 10},
+            {"text": "있는 편", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안정적임", "score": 0}
+          ]
+        },
+        {
+          "text": "분위기에 따라 마음이 변하나요?",
+          "options": [
+            {"text": "완전히 달라짐", "score": 10},
+            {"text": "영향 많이 받음", "score": 7},
+            {"text": "조금 받음", "score": 4},
+            {"text": "안 받음", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적인 교류가 있나요?",
+          "options": [
+            {"text": "깊은 감정 공유", "score": 10},
+            {"text": "감정 이야기함", "score": 7},
+            {"text": "얕은 대화", "score": 4},
+            {"text": "대화 없음", "score": 0}
+          ]
+        },
+        {
+          "text": "직감적으로 어떤가요?",
+          "options": [
+            {"text": "완전 내 사람", "score": 10},
+            {"text": "맞는 거 같음", "score": 7},
+            {"text": "잘 모르겠음", "score": 4},
+            {"text": "아닌 거 같음", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 감정을 표현하나요?",
+          "options": [
+            {"text": "솔직하게 다 표현", "score": 10},
+            {"text": "느껴지게 표현", "score": 7},
+            {"text": "간접적으로 표현", "score": 4},
+            {"text": "숨김", "score": 0}
+          ]
+        },
+        {
+          "text": "내 감정을 이해해주나요?",
+          "options": [
+            {"text": "완벽하게 공감", "score": 10},
+            {"text": "이해해줌", "score": 7},
+            {"text": "물어봄", "score": 4},
+            {"text": "무관심", "score": 0}
+          ]
+        },
+        {
+          "text": "따뜻한 관심을내나요?",
+          "options": [
+            {"text": "항상 따뜻함", "score": 10},
+            {"text": "자주 챙김", "score": 7},
+            {"text": "가끔 챙김", "score": 4},
+            {"text": "차가움", "score": 0}
+          ]
+        },
+        {
+          "text": "감성적인 순간을 만들나요?",
+          "options": [
+            {"text": "자주 로맨틱함", "score": 10},
+            {"text": "만들어줌", "score": 7},
+            {"text": "드물음", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "마음이 전해지나요?",
+          "options": [
+            {"text": "완전히 느껴짐", "score": 10},
+            {"text": "느껴짐", "score": 7},
+            {"text": "애매함", "score": 4},
+            {"text": "안 느껴짐", "score": 0}
+          ]
+        }
+      ]
+    },
+    "20M_D": {
+      "name": "20대초반_남성_직진파",
+      "profile": "대학생, 적극적, 경쟁적, 성과 중시",
+      "sum": [
+        {
+          "text": "내가 만나자고 하면 반응은?",
+          "options": [
+            {"text": "바로 OK, 더 적극적", "score": 10},
+            {"text": "흔쾌히 OK", "score": 7},
+            {"text": "애매하게 OK", "score": 4},
+            {"text": "피하거나 거절", "score": 0}
+          ]
+        },
+        {
+          "text": "상대가 나와의 만남을 즐기나요?",
+          "options": [
+            {"text": "매우 즐거워함", "score": 10},
+            {"text": "즐거워함", "score": 7},
+            {"text": "그냥 그럼", "score": 4},
+            {"text": "지루해함", "score": 0}
+          ]
+        },
+        {
+          "text": "경쟁자(다른 이성) 있을 때 반응은?",
+          "options": [
+            {"text": "더 적극적으로 다가옴", "score": 10},
+            {"text": "신경 쓰는 듯", "score": 7},
+            {"text": "모르는 척", "score": 4},
+            {"text": "신경 안 씀", "score": 0}
+          ]
+        },
+        {
+          "text": "내 외모/스타일을 칭찬하나요?",
+          "options": [
+            {"text": "자주 구체적으로 칭찬", "score": 10},
+            {"text": "가끔 칭찬", "score": 7},
+            {"text": "드물게 칭찬", "score": 4},
+            {"text": "안 칭찬", "score": 0}
+          ]
+        },
+        {
+          "text": "다음 단계로 진전되나요?",
+          "options": [
+            {"text": "빠르게 가까워짐", "score": 10},
+            {"text": "서서히 가까워짐", "score": 7},
+            {"text": "제자리", "score": 4},
+            {"text": "멀어짐", "score": 0}
+          ]
+        },
+        {
+          "text": "SNS에서 반응은?",
+          "options": [
+            {"text": "바로보고 반응", "score": 10},
+            {"text": "자주 반응", "score": 7},
+            {"text": "가끔 반응", "score": 4},
+            {"text": "무관심", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "이길 자신 있나요?",
+          "options": [
+            {"text": "확실함", "score": 10},
+            {"text": "충분히 가능", "score": 7},
+            {"text": "반반", "score": 4},
+            {"text": "힘들 것 같음", "score": 0}
+          ]
+        },
+        {
+          "text": "적극적으로 행동한 정도는?",
+          "options": [
+            {"text": "매우 적극적", "score": 10},
+            {"text": "적극적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "소극적", "score": 0}
+          ]
+        },
+        {
+          "text": "결과와 상관없이 계속 시도할 건가요?",
+          "options": [
+            {"text": "끝까지 간다", "score": 10},
+            {"text": "최선을 다함", "score": 7},
+            {"text": "적당히", "score": 4},
+            {"text": "포기할 수도", "score": 0}
+          ]
+        },
+        {
+          "text": "승부욕이 생기나요?",
+          "options": [
+            {"text": "반드시 성공해야 함", "score": 10},
+            {"text": "되게 하고 싶음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        },
+        {
+          "text": "투자한 시간/돈 아깝지 않나요?",
+          "options": [
+            {"text": "전혀 안 아까움", "score": 10},
+            {"text": "별로 안 아까움", "score": 7},
+            {"text": "조금 아까움", "score": 4},
+            {"text": "아까움", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 내 적극성에 화답하나요?",
+          "options": [
+            {"text": "더 적극적으로", "score": 10},
+            {"text": "받아줌", "score": 7},
+            {"text": "부담", "score": 4},
+            {"text": "거절", "score": 0}
+          ]
+        },
+        {
+          "text": "내 매력을 인정해주나요?",
+          "options": [
+            {"text": "극찬함", "score": 10},
+            {"text": "인정함", "score": 7},
+            {"text": "애매함", "score": 4},
+            {"text": "무관심", "score": 0}
+          ]
+        },
+        {
+          "text": "내 제안을 수용하나요?",
+          "options": [
+            {"text": "항상 OK", "score": 10},
+            {"text": "대체로 OK", "score": 7},
+            {"text": "반반", "score": 4},
+            {"text": "거절 많음", "score": 0}
+          ]
+        },
+        {
+          "text": "나에게 열려있나요?",
+          "options": [
+            {"text": "완전 개방", "score": 10},
+            {"text": "열림", "score": 7},
+            {"text": "반반", "score": 4},
+            {"text": "닫힘", "score": 0}
+          ]
+        },
+        {
+          "text": "나와의 경쟁에서 지려하나요?",
+          "options": [
+            {"text": "관심 집중", "score": 10},
+            {"text": "경쟁 의식", "score": 7},
+            {"text": "모르겠음", "score": 4},
+            {"text": "다른 선택지", "score": 0}
+          ]
+        }
+      ]
+    },
+    "20M_R": {
+      "name": "20대초반_남성_합리파",
+      "profile": "대학생, 현실적, 효율 중시, 조건 따짐",
+      "sum": [
+        {
+          "text": "이 관계의 실익은?",
+          "options": [
+            {"text": "매우 큼", "score": 10},
+            {"text": "있음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "시간 투자 대비 만족도는?",
+          "options": [
+            {"text": "훌륭함", "score": 10},
+            {"text": "좋음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        },
+        {
+          "text": "상대의 조건은 내 기준에?",
+          "options": [
+            {"text": "충족함", "score": 10},
+            {"text": "대체로 충족", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "미달", "score": 0}
+          ]
+        },
+        {
+          "text": "객관적으로 관계 가능성은?",
+          "options": [
+            {"text": "매우 높음", "score": 10},
+            {"text": "높음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "낮음", "score": 0}
+          ]
+        },
+        {
+          "text": "미래 계획이 맞나요?",
+          "options": [
+            {"text": "완벽히 일치", "score": 10},
+            {"text": "대체로 일치", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "다름", "score": 0}
+          ]
+        },
+        {
+          "text": "비용 대비 효과가 있나요?",
+          "options": [
+            {"text": "훌륭함", "score": 10},
+            {"text": "괜찮음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "실익이 있다고 보나요?",
+          "options": [
+            {"text": "매우 있음", "score": 10},
+            {"text": "있음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "조건이 괜찮나요?",
+          "options": [
+            {"text": "완벽함", "score": 10},
+            {"text": "괜찮음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        },
+        {
+          "text": "감정보다 이성이 말하나요?",
+          "options": [
+            {"text": "완전히 이성", "score": 10},
+            {"text": "이성이 셈", "score": 7},
+            {"text": "반반", "score": 4},
+            {"text": "감정이 셈", "score": 0}
+          ]
+        },
+        {
+          "text": "다른 대안과 비교하면?",
+          "options": [
+            {"text": "이게 최고", "score": 10},
+            {"text": "좋음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "다른게 나음", "score": 0}
+          ]
+        },
+        {
+          "text": "투자할 가치가 있나요?",
+          "options": [
+            {"text": "매우 있음", "score": 10},
+            {"text": "있음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 현실적으로 접근하나요?",
+          "options": [
+            {"text": "매우 현실적", "score": 10},
+            {"text": "현실적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "비현실적", "score": 0}
+          ]
+        },
+        {
+          "text": "조건을 고려하나요?",
+          "options": [
+            {"text": "매우 신경 씀", "score": 10},
+            {"text": "신경 씀", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안 씀", "score": 0}
+          ]
+        },
+        {
+          "text": "효율적인 관계인가요?",
+          "options": [
+            {"text": "매우 효율적", "score": 10},
+            {"text": "효율적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "비효율적", "score": 0}
+          ]
+        },
+        {
+          "text": "미래를 같이 계획하나요?",
+          "options": [
+            {"text": "구체적으로", "score": 10},
+            {"text": "이야기함", "score": 7},
+            {"text": "얕게", "score": 4},
+            {"text": "안 함", "score": 0}
+          ]
+        },
+        {
+          "text": "객관적으로 나를 평가하나요?",
+          "options": [
+            {"text": "높게 평가", "score": 10},
+            {"text": "평가함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "낮게 평가", "score": 0}
+          ]
+        }
+      ]
+    },
+    "25F_C": {
+      "name": "20대중반_여성_신중파",
+      "profile": "사회초년생, 신중함, 안정 추구, 깊은 관계 선호",
+      "sum": [
+        {
+          "text": "상대가 나를 꾸준히 알아가려 하나요?",
+          "options": [
+            {"text": "매우 꾸준함", "score": 10},
+            {"text": "꾸준한 편", "score": 7},
+            {"text": "가끔", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        },
+        {
+          "text": "시간이 지날수록 신뢰가 쌓이나요?",
+          "options": [
+            {"text": "확실히 쌓임", "score": 10},
+            {"text": "쌓이는 중", "score": 7},
+            {"text": "그냥 그럼", "score": 4},
+            {"text": "안쌓임", "score": 0}
+          ]
+        },
+        {
+          "text": "서로의 가치관이 맞나요?",
+          "options": [
+            {"text": "매우 잘 맞음", "score": 10},
+            {"text": "대체로 맞음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안맞음", "score": 0}
+          ]
+        },
+        {
+          "text": "상대가 진지하게 대하나요?",
+          "options": [
+            {"text": "매우 진지함", "score": 10},
+            {"text": "진지한 편", "score": 7},
+            {"text": "가끔", "score": 4},
+            {"text": "가볍게", "score": 0}
+          ]
+        },
+        {
+          "text": "미래를 함께 그려보나요?",
+          "options": [
+            {"text": "구체적으로", "score": 10},
+            {"text": "이야기함", "score": 7},
+            {"text": "얕게", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "정말 잘 알고 있다고 느끼나요?",
+          "options": [
+            {"text": "완전히 앎", "score": 10},
+            {"text": "잘 앎", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "잘 모름", "score": 0}
+          ]
+        },
+        {
+          "text": "신뢰할 수 있나요?",
+          "options": [
+            {"text": "완전히 신뢰", "score": 10},
+            {"text": "신뢰함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "신뢰 못함", "score": 0}
+          ]
+        },
+        {
+          "text": "오랜 시간 투자했나요?",
+          "options": [
+            {"text": "매우 많이", "score": 10},
+            {"text": "많이", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "적게", "score": 0}
+          ]
+        },
+        {
+          "text": "실패해도 괜찮을까요?",
+          "options": [
+            {"text": "감수 가능", "score": 10},
+            {"text": "할만함", "score": 7},
+            {"text": "걱정됨", "score": 4},
+            {"text": "무서움", "score": 0}
+          ]
+        },
+        {
+          "text": "확신이 드나요?",
+          "options": [
+            {"text": "매우 확신", "score": 10},
+            {"text": "확신함", "score": 7},
+            {"text": "반반", "score": 4},
+            {"text": "불확실", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 꾸준한가요?",
+          "options": [
+            {"text": "매우 꾸준함", "score": 10},
+            {"text": "꾸준함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "불규칙", "score": 0}
+          ]
+        },
+        {
+          "text": "약속을 잘 지키나요?",
+          "options": [
+            {"text": "항상 지킴", "score": 10},
+            {"text": "대체로 지킴", "score": 7},
+            {"text": "가끔 미룸", "score": 4},
+            {"text": "안지킴", "score": 0}
+          ]
+        },
+        {
+          "text": "진심을 보여주나요?",
+          "options": [
+            {"text": "솔직함", "score": 10},
+            {"text": "진심보임", "score": 7},
+            {"text": "표면적", "score": 4},
+            {"text": "가식적", "score": 0}
+          ]
+        },
+        {
+          "text": "오래 지켜보나요?",
+          "options": [
+            {"text": "꾸준히", "score": 10},
+            {"text": "자주", "score": 7},
+            {"text": "가끔", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        },
+        {
+          "text": "미래를 약속하나요?",
+          "options": [
+            {"text": "구체적으로", "score": 10},
+            {"text": "이야기함", "score": 7},
+            {"text": "얕게", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        }
+      ]
+    },
+    "25F_R": {
+      "name": "20대중반_여성_합리파",
+      "profile": "사회초년생, 현실적, 조건 따짐, 안정 추구",
+      "sum": [
+        {
+          "text": "상대의 직업/경제력은?",
+          "options": [
+            {"text": "매우 만족", "score": 10},
+            {"text": "만족", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "불만족", "score": 0}
+          ]
+        },
+        {
+          "text": "가치관이 실제로 맞나요?",
+          "options": [
+            {"text": "완벽히 일치", "score": 10},
+            {"text": "대체로 일치", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "다름", "score": 0}
+          ]
+        },
+        {
+          "text": "결혼을 염두에 둔 관계인가요?",
+          "options": [
+            {"text": "확실함", "score": 10},
+            {"text": "그럴 듯", "score": 7},
+            {"text": "모르겠음", "score": 4},
+            {"text": "아님", "score": 0}
+          ]
+        },
+        {
+          "text": "실질적 이익이 있나요?",
+          "options": [
+            {"text": "매우 큼", "score": 10},
+            {"text": "있음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "가족/친구가 인정하나요?",
+          "options": [
+            {"text": "매우 좋게 봄", "score": 10},
+            {"text": "괜찮다고 봄", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "조건이 충족되나요?",
+          "options": [
+            {"text": "완벽함", "score": 10},
+            {"text": "충족됨", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "미달", "score": 0}
+          ]
+        },
+        {
+          "text": "결혼 상대로 생각해본 적?",
+          "options": [
+            {"text": "구체적으로", "score": 10},
+            {"text": "생각함", "score": 7},
+            {"text": "얕게", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        },
+        {
+          "text": "실익이 있다고 보나요?",
+          "options": [
+            {"text": "매우 있음", "score": 10},
+            {"text": "있음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "투자 대비 수익이 있나요?",
+          "options": [
+            {"text": "훌륭함", "score": 10},
+            {"text": "괜찮음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        },
+        {
+          "text": "논리적으로 맞나요?",
+          "options": [
+            {"text": "완벽함", "score": 10},
+            {"text": "맞음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안맞음", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 현실적 조건을 갖췄나요?",
+          "options": [
+            {"text": "완벽함", "score": 10},
+            {"text": "갖춤", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        },
+        {
+          "text": "미래 계획이 구체적이신가요?",
+          "options": [
+            {"text": "매우 구체적", "score": 10},
+            {"text": "구체적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "실질적으로 투자하나요?",
+          "options": [
+            {"text": "매우 많이", "score": 10},
+            {"text": "많이", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "적게", "score": 0}
+          ]
+        },
+        {
+          "text": "안정적인 사람인가요?",
+          "options": [
+            {"text": "매우 안정적", "score": 10},
+            {"text": "안정적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "불안정", "score": 0}
+          ]
+        },
+        {
+          "text": "객관적으로 좋은 사람인가요?",
+          "options": [
+            {"text": "매우 좋음", "score": 10},
+            {"text": "좋음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "별로", "score": 0}
+          ]
+        }
+      ]
+    },
+    "25F_P": {
+      "name": "20대중반_여성_감성파",
+      "profile": "사회초년생, 감성적, 깊은 관계, 분위기 중시",
+      "sum": [
+        {
+          "text": "감정적으로 깊이 연결되나요?",
+          "options": [
+            {"text": "매우 깊음", "score": 10},
+            {"text": "깊음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "얕음", "score": 0}
+          ]
+        },
+        {
+          "text": "함께 있을 때 위로받나요?",
+          "options": [
+            {"text": "매우 위로됨", "score": 10},
+            {"text": "위로됨", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "불편함", "score": 0}
+          ]
+        },
+        {
+          "text": "진심 어린 대화가 있나요?",
+          "options": [
+            {"text": "매우 깊음", "score": 10},
+            {"text": "깊음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "얕음", "score": 0}
+          ]
+        },
+        {
+          "text": "서로의 감정을 존중하나요?",
+          "options": [
+            {"text": "완벽히 존중", "score": 10},
+            {"text": "존중함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "무시함", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적 안정감이 있나요?",
+          "options": [
+            {"text": "매우 안정", "score": 10},
+            {"text": "안정", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "불안함", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "감정적으로 의지되나요?",
+          "options": [
+            {"text": "매우 의지됨", "score": 10},
+            {"text": "의지됨", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안됨", "score": 0}
+          ]
+        },
+        {
+          "text": "감정을 솔직히 나누나요?",
+          "options": [
+            {"text": "완전히 나눔", "score": 10},
+            {"text": "나눔", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "숨김", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적으로 성장하나요?",
+          "options": [
+            {"text": "매우 성장", "score": 10},
+            {"text": "성장", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "정체", "score": 0}
+          ]
+        },
+        {
+          "text": "마음이 편안한가요?",
+          "options": [
+            {"text": "매우 편안", "score": 10},
+            {"text": "편안", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "불편", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적으로 만족하나요?",
+          "options": [
+            {"text": "매우 만족", "score": 10},
+            {"text": "만족", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "불만족", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 감정을 존중하나요?",
+          "options": [
+            {"text": "완벽히 존중", "score": 10},
+            {"text": "존중함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "무시함", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적으로 지지해주나요?",
+          "options": [
+            {"text": "항상 지지", "score": 10},
+            {"text": "지지함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        },
+        {
+          "text": "진심을 다해 대하나요?",
+          "options": [
+            {"text": "완전히 진심", "score": 10},
+            {"text": "진심", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "가식적", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적 교류가 있나요?",
+          "options": [
+            {"text": "매우 깊음", "score": 10},
+            {"text": "깊음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "얕음", "score": 0}
+          ]
+        },
+        {
+          "text": "감정적으로 안전한가요?",
+          "options": [
+            {"text": "매우 안전", "score": 10},
+            {"text": "안전", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "위험", "score": 0}
+          ]
+        }
+      ]
+    },
+    "25M_D": {
+      "name": "20대중반_남성_직진파",
+      "profile": "사회초년생, 적극적, 성과 중시, 빠른 진행",
+      "sum": [
+        {
+          "text": "만남이 자주 성사되나요?",
+          "options": [
+            {"text": "매우 자주", "score": 10},
+            {"text": "자주", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "드물게", "score": 0}
+          ]
+        },
+        {
+          "text": "관계가 빠르게 진전되나요?",
+          "options": [
+            {"text": "매우 빠름", "score": 10},
+            {"text": "빠름", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "느림", "score": 0}
+          ]
+        },
+        {
+          "text": "상대가 내 적극성에 응답하나요?",
+          "options": [
+            {"text": "더 적극적으로", "score": 10},
+            {"text": "잘 응답", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "부담", "score": 0}
+          ]
+        },
+        {
+          "text": "성과(확신)가 보이나요?",
+          "options": [
+            {"text": "확실한 성과", "score": 10},
+            {"text": "성과 있음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "서로의 시간을 효율적으로 쓰나요?",
+          "options": [
+            {"text": "매우 효율적", "score": 10},
+            {"text": "효율적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "비효율적", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "성공할 자신 있나요?",
+          "options": [
+            {"text": "확신함", "score": 10},
+            {"text": "자신 있음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "적극적으로 노력했나요?",
+          "options": [
+            {"text": "최선을 다함", "score": 10},
+            {"text": "노력함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "소극적", "score": 0}
+          ]
+        },
+        {
+          "text": "결과가 기대되나요?",
+          "options": [
+            {"text": "매우 기대됨", "score": 10},
+            {"text": "기대됨", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안 기대됨", "score": 0}
+          ]
+        },
+        {
+          "text": "포기하지 않을 건가요?",
+          "options": [
+            {"text": "끝까지", "score": 10},
+            {"text": "최대한", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "포기 가능", "score": 0}
+          ]
+        },
+        {
+          "text": "투자한 게 아깝지 않나요?",
+          "options": [
+            {"text": "전혀 안 아까움", "score": 10},
+            {"text": "안 아까움", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "아까움", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 내 노력에 감사하나요?",
+          "options": [
+            {"text": "매우 고마워함", "score": 10},
+            {"text": "고마워함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "무관심", "score": 0}
+          ]
+        },
+        {
+          "text": "성과에 기여하나요?",
+          "options": [
+            {"text": "매우 기여", "score": 10},
+            {"text": "기여", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "미흡", "score": 0}
+          ]
+        },
+        {
+          "text": "적극성을 인정해주나요?",
+          "options": [
+            {"text": "극찬함", "score": 10},
+            {"text": "인정함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "무시", "score": 0}
+          ]
+        },
+        {
+          "text": "함께 성장하나요?",
+          "options": [
+            {"text": "매우 활발", "score": 10},
+            {"text": "활발", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "정체", "score": 0}
+          ]
+        },
+        {
+          "text": "미래를 위해 노력하나요?",
+          "options": [
+            {"text": "구체적으로", "score": 10},
+            {"text": "노력함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        }
+      ]
+    },
+    "25M_R": {
+      "name": "20대중반_남성_합리파",
+      "profile": "사회초년생, 현실적, 효율 중시, 조건 따짐",
+      "sum": [
+        {
+          "text": "상대가 현실적 조건을 갖췄나요?",
+          "options": [
+            {"text": "완벽", "score": 10},
+            {"text": "갖춤", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "부족", "score": 0}
+          ]
+        },
+        {
+          "text": "관계가 실질적으로 이로운가요?",
+          "options": [
+            {"text": "매우 이로움", "score": 10},
+            {"text": "이로움", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "해로움", "score": 0}
+          ]
+        },
+        {
+          "text": "미래 계획이 구체적인가요?",
+          "options": [
+            {"text": "매우 구체적", "score": 10},
+            {"text": "구체적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "없음", "score": 0}
+          ]
+        },
+        {
+          "text": "효율적인 관계인가요?",
+          "options": [
+            {"text": "매우 효율", "score": 10},
+            {"text": "효율", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "비효율", "score": 0}
+          ]
+        },
+        {
+          "text": "가치관이 실제로 맞나요?",
+          "options": [
+            {"text": "완벽", "score": 10},
+            {"text": "맞음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "틀림", "score": 0}
+          ]
+        }
+      ],
+      "self": [
+        {
+          "text": "객관적으로 이득인가요?",
+          "options": [
+            {"text": "매우 이득", "score": 10},
+            {"text": "이득", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "손해", "score": 0}
+          ]
+        },
+        {
+          "text": "조건이 적합한가요?",
+          "options": [
+            {"text": "완벽", "score": 10},
+            {"text": "적합", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "부적합", "score": 0}
+          ]
+        },
+        {
+          "text": "미래를 현실적으로 보나요?",
+          "options": [
+            {"text": "매우 현실적", "score": 10},
+            {"text": "현실적", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "비현실", "score": 0}
+          ]
+        },
+        {
+          "text": "투자가 가치 있나요?",
+          "options": [
+            {"text": "매우 가치", "score": 10},
+            {"text": "가치", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "무가치", "score": 0}
+          ]
+        },
+        {
+          "text": "논리적으로 맞나요?",
+          "options": [
+            {"text": "완벽", "score": 10},
+            {"text": "맞음", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "틀림", "score": 0}
+          ]
+        }
+      ],
+      "other": [
+        {
+          "text": "상대가 현실적으로 접근하나요?",
+          "options": [
+            {"text": "매우 현실", "score": 10},
+            {"text": "현실", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "비현실", "score": 0}
+          ]
+        },
+        {
+          "text": "실질적으로 투자하나요?",
+          "options": [
+            {"text": "매우 많이", "score": 10},
+            {"text": "많이", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "적게", "score": 0}
+          ]
+        },
+        {
+          "text": "미래를 현실적으로 계획하나요?",
+          "options": [
+            {"text": "구체적", "score": 10},
+            {"text": "계획함", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "안함", "score": 0}
+          ]
+        },
+        {
+          "text": "효율성을 중시하나요?",
+          "options": [
+            {"text": "매우 중시", "score": 10},
+            {"text": "중시", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "무시", "score": 0}
+          ]
+        },
+        {
+          "text": "객관적으로 나를 평가하나요?",
+          "options": [
+            {"text": "높게 평가", "score": 10},
+            {"text": "평가", "score": 7},
+            {"text": "보통", "score": 4},
+            {"text": "낮게 평가", "score": 0}
+          ]
+        }
+      ]
+    }
+  }
+}
