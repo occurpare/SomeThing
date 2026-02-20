@@ -4,281 +4,384 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SomeThing - 썸 판별 테스트</title>
-    <meta name="description" content="우리는 지금 무슨 사이? 8가지 연애 성향 분석 + 썸 판별 테스트">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+        
+        :root {
+            --primary: #FF6B6B;
+            --primary-dark: #E85A5A;
+            --bg: #FFF5F5;
+            --surface: #FFFFFF;
+            --text: #2D3436;
+            --text-light: #636E72;
+            --border: #FFE0E0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .page.active { display: block; animation: fadeIn 0.3s ease; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Landing */
+        #landing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .landing-content { max-width: 400px; }
+        
+        .logo-icon {
+            font-size: 72px;
+            margin-bottom: 16px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        
+        .sub-tagline {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            margin-top: 12px;
+        }
+        
+        /* Test Pages */
+        .test-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: var(--surface);
+            border-radius: 24px;
+            padding: 32px 24px;
+            min-height: calc(100vh - 40px);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            margin-bottom: 32px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), #FF8E8E);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-text {
+            text-align: right;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+        
+        .question-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .option-btn {
+            padding: 16px 20px;
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+        
+        .option-btn:hover {
+            border-color: var(--primary);
+        }
+        
+        /* Result */
+        .result-badge {
+            text-align: center;
+            padding: 48px 0;
+        }
+        
+        .result-icon {
+            font-size: 72px;
+            margin-bottom: 16px;
+        }
+        
+        .result-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .result-desc {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .result-keywords {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .keyword-tag {
+            padding: 6px 14px;
+            background: var(--bg);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--primary);
+        }
+        
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 32px;
+        }
+        
+        /* Test Selection */
+        .test-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .test-card {
+            padding: 24px;
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .test-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .test-card-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        
+        .test-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .test-card-desc {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        /* Final Result */
+        .percentage-display {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .percentage {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .result-level {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .result-detail {
+            font-size: 15px;
+            color: var(--text-light);
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .test-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="app-container">
-        <!-- 랜딩 페이지 -->
-        <section id="landing" class="page active">
-            <div class="landing-content">
-                <div class="logo-section">
-                    <div class="logo-icon">💕</div>
-                    <h1 class="app-title">SomeThing</h1>
-                    <p class="tagline">우리는 지금 무슨 사이?</p>
-                    <p class="sub-tagline">8가지 연애 성향 분석 + 썸 판별 테스트</p>
-                </div>
-                
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <span class="feature-icon">🔥</span>
-                        <span class="feature-text">나의 연애 성향 분석</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">💕</span>
-                        <span class="feature-text">썸 확률 측정</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🎯</span>
-                        <span class="feature-text">맞춤형 연애 조언</span>
-                    </div>
-                </div>
-                
-                <button class="btn btn-primary btn-large" onclick="startApp()">
-                    <span class="btn-text">테스트 시작하기</span>
-                    <span class="btn-arrow">→</span>
-                </button>
-                
-                <p class="test-meta">⏱️ 약 5분 소요 · 28문항</p>
-            </div>
-        </section>
+    <!-- Landing -->
+    <section id="landing" class="page active">
+        <div class="landing-content">
+            <div class="logo-icon">💕</div>
+            <h1>SomeThing</h1>
+            <p class="tagline">우리는 지금 무슨 사이?</p>
+            <p class="sub-tagline">10가지 연애 성향 분석 + 맞춤 테스트</p>
+            <button class="btn btn-primary" onclick="startApp()">테스트 시작하기 →</button>
+        </div>
+    </section>
 
-        <!-- 기본 정보 입력 -->
-        <section id="profile" class="page">
-            <div class="page-header">
-                <button class="btn-back" onclick="goBack()">←</button>
-                <h2 class="page-title">기본 정보</h2>
-                <div class="page-step">1/4</div>
+    <!-- Personality Test -->
+    <section id="personality" class="page">
+        <div class="test-container">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 10%"></div>
             </div>
-            
-            <div class="page-content">
-                <div class="form-section">
-                    <label class="form-label">성별을 선택해주세요</label>
-                    
-                    <div class="gender-selector">
-                        <button class="gender-btn" data-gender="M" onclick="selectGender('M')">
-                            <span class="gender-icon">👨</span>
-                            <span class="gender-label">남성</span>
-                        </button>
-                        
-                        <button class="gender-btn" data-gender="F" onclick="selectGender('F')">
-                            <span class="gender-icon">👩</span>
-                            <span class="gender-label">여성</span>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="form-section">
-                    <label class="form-label">연령대를 선택해주세요</label>
-                    
-                    <div class="age-grid">
-                        <button class="age-btn" data-age="A1" onclick="selectAge('A1')">10대</button>
-                        <button class="age-btn" data-age="A2" onclick="selectAge('A2')">20대 초반</button>
-                        <button class="age-btn" data-age="A3" onclick="selectAge('A3')">20대 중반</button>
-                        <button class="age-btn" data-age="A4" onclick="selectAge('A4')">20대 후반</button>
-                        <button class="age-btn" data-age="A5" onclick="selectAge('A5')">30대</button>
-                        <button class="age-btn" data-age="A6" onclick="selectAge('A6')">40대 이상</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="page-footer">
-                <button class="btn btn-primary" id="profile-next-btn" onclick="goToPersonality()" disabled>
-                    다음으로
-                    <span class="btn-arrow">→</span>
-                </button>
-            </div>
-        </section>
+            <div class="progress-text" id="p-progress">1/10</div>
+            <h2 class="question-title" id="p-question">로딩 중...</h2>
+            <div class="options-container" id="p-options"></div>
+        </div>
+    </section>
 
-        <!-- 연애 성향 테스트 -->
-        <section id="personality" class="page">
-            <div class="page-header">
-                <button class="btn-back" onclick="goBack()">←</button>
-                <h2 class="page-title">연애 성향 테스트</h2>
-                <div class="page-step">2/4</div>
-            </div>
-            
-            <div class="page-content">
-                <div class="progress-section">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="p-progress"></div>
-                    </div>
-                    <div class="progress-text">
-                        <span id="p-current">1</span> / 8
-                    </div>
-                </div>
-                
-                <div class="question-section">
-                    <p class="question-text" id="p-question"></p>
-                    
-                    <div class="options-container" id="p-options"></div>
+    <!-- Personality Result -->
+    <section id="personality-result" class="page">
+        <div class="test-container">
+            <div class="result-badge">
+                <div class="result-icon" id="pr-icon">🔥</div>
+                <div class="result-name" id="pr-name">당신은 직진파!</div>
+                <p class="result-desc" id="pr-desc">좋아하면 바로 표현하는 적극적인 연애 전사</p>
+                <div class="result-keywords" id="pr-keywords">
+                    <span class="keyword-tag">적극적</span>
+                    <span class="keyword-tag">솔직함</span>
                 </div>
             </div>
             
-            <div class="page-footer">
-                <button class="btn btn-primary hidden" id="p-next-btn" onclick="nextPersonalityQuestion()">
-                    다음으로
-                    <span class="btn-arrow">→</span>
-                </button>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="goToTestSelect()">테스트 선택하기 →</button>
+                <button class="btn btn-secondary" onclick="restart()">↺ 처음으로</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 연애 성향 결과 (중간 결과) -->
-        <section id="personality-result" class="page">
-            <div class="result-content">
-                <div class="type-badge">
-                    <span class="type-icon" id="pr-icon">🔥</span>
-                </div>
-                
-                <h2 class="result-title">
-                    당신은 <span id="pr-type-name">직진파</span>!
-                </h2>
-                
-                <p class="result-description" id="pr-type-desc"></p>
-                
-                <div class="type-characteristics">
-                    <h3></h3>
-                    <ul id="pr-traits"></ul>
-                </div>
-                
-                <div class="next-hint">
-                    <p></p>
-                    <div class="hint-box">
-                        <span class="hint-icon">💡</span>
-                        <p" class="hint-text">성향에 맞춰 썸 판별 테스트를 진행할게요!</p>
-                    </div>
-                </div>
-                
-                <button class="btn btn-primary btn-large" onclick="startSumTest()">
-                    썸 판별 테스트 시작하기
-                    <span class="btn-arrow">→</span>
-                </button>
-            </div>
-        </section>
-
-        <!-- 썸 판별 테스트 -->
-        <section id="sum" class="page">
-            <div class="page-header">
-                <button class="btn-back" onclick="goBack()">←</button>
-                <h2 class="page-title">썸 판별 테스트</h2>
-                <div class="page-step">3/4</div>
-            </div>
+    <!-- Test Selection -->
+    <section id="test-select" class="page">
+        <div class="test-container">
+            <h2 class="question-title">어떤 테스트를 해볼까요? 🎯</h2>
             
-            <div class="page-content">
-                <div class="progress-section">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="s-progress"></div>
-                    </div>
-                    <div class="progress-text">
-                        <span id="s-current">1</span> / 20
-                    </div>
+            <div class="test-cards">
+                <div class="test-card" onclick="selectTest('sum')">
+                    <div class="test-card-icon">💕</div>
+                    <div class="test-card-title">썸이냐?</div>
+                    <div class="test-card-desc">우리 지금 썸인지 확인하기</div>
                 </div>
                 
-                <div class="question-section">
-                    <p class="question-text" id="s-question"></p>
-                    
-                    <div class="options-container" id="s-options"></div>
+                <div class="test-card" onclick="selectTest('self')">
+                    <div class="test-card-icon">💭</div>
+                    <div class="test-card-title">나.. 얘 좋아하냐?</div>
+                    <div class="test-card-desc">내 마음 속 진실 확인하기</div>
+                </div>
+                
+                <div class="test-card" onclick="selectTest('other')">
+                    <div class="test-card-icon">👀</div>
+                    <div class="test-card-title">얘.. 나 좋아하냐?</div>
+                    <div class="test-card-desc">상대방의 마음 확인하기</div>
                 </div>
             </div>
             
-            <div class="page-footer">
-                <button class="btn btn-primary hidden" id="s-next-btn" onclick="nextSumQuestion()">
-                    다음으로
-                    <span class="btn-arrow">→</span>
-                </button>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="restart()">↺ 처음으로</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 최종 결과 -->
-        <section id="result" class="page">
-            <div class="result-content">
-                <div class="result-badge">
-                    <div class="result-percentage">
-                        <span class="percentage-value" id="r-percentage">0</span>
-                        <span class="percentage-unit">%</span>
-                    </div>
-                    
-                    <div class="result-level" id="r-level">확인 중...</div>
-                </div>
-                
-                <div class="result-box">
-                    <h3 class="result-box-title">📊 분석 결과</h3>
-                    
-                    <p class="result-summary" id="r-summary"></p>
-                    
-                    <div class="result-detail">
-                        <div class="detail-item">
-                            <span class="detail-label">당신의 연애 성향:</span>
-                            <span class="detail-value" id="r-personality">-</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="advice-box">
-                    <h3 class="advice-title">💡 맞춤 조언</h3>
-                    
-                    <p class="advice-text" id="r-advice"></p>
-                </div>
-                
-                <div class="recommended-tests">
-                    <h3 class="section-title">더 알아보기 🔍</h3>
-                    
-                    <div class="test-cards" id="r-test-cards"></div>
-                </div>
-                
-                <div class="result-actions">
-                    <button class="btn btn-secondary" onclick="restartApp()">
-                        <span>🔄</span>
-                        테스트 다시하기
-                    </button>
-                    
-                    <button class="btn btn-share" onclick="shareResult()">
-                        <span>📤</span>
-                        결과 공유하기
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 서브 테스트 -->
-        <section id="subtest" class="page">
-            <div class="page-header">
-                <button class="btn-back" onclick="backToResult()">←</button>
-                <h2 class="page-title" id="sub-title">테스트</h2>
-                <div class="page-step"></div>
+    <!-- Test Page (Dynamic Title) -->
+    <section id="test-page" class="page">
+        <div class="test-container">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 20%"></div>
             </div>
             
-            <div class="page-content">
-                <div class="progress-section">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="sub-progress"></div>
-                    </div>
-                    
-                    <div class="progress-text">
-                        <span id="sub-current">1</span> / <span id="sub-total">5</span>
-                    </div>
-                </div>
-                
-                <div class="question-section">
-                    <p class="question-text" id="sub-question"></p>
-                    
-                    <div class="options-container" id="sub-options"></div>
-                </div>
+            <div class="progress-text" id="t-progress">1/6</div>
+            
+            <div style="margin-bottom: 8px; color: var(--primary); font-size: 14px; font-weight: 600;"><span id="t-title">썸이냐?</span></div>
+            <h2 class="question-title" id="t-question">로딩 중...</h2>
+            
+            <div class="options-container" id="t-options"></div>
+        </div>
+    </section>
+
+    <!-- Final Result -->
+    <section id="result" class="page">
+        <div class="test-container">
+            <div class="percentage-display">
+                <div class="percentage" id="result-percentage">75%</div>
+                <div class="result-level" id="result-level">썸 가능성 있음 💫</div>
+                <div class="result-detail" id="result-desc">좋은 신호가 보이지만 아직은 애매해요.</div>
             </div>
             
-            <div class="page-footer">
-                <button class="btn btn-primary hidden" id="sub-next-btn" onclick="nextSubQuestion()">
-                    다음으로
-                    <span class="btn-arrow">→</span>
-                </button>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="goToTestSelect()">다른 테스트 하기 →</button>
+                <button class="btn btn-secondary" onclick="restart()">↺ 처음으로</button>
             </div>
-        </section>
-
-        <!-- 토스트 메시지 -->
-        <div id="toast" class="toast hidden"></div>
-    </div>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
