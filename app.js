@@ -308,18 +308,23 @@ function goToPersonalityResult() {
 
 // ========== 조합 키 생성 ==========
 function getCombinationKey() {
-    // 나이 코드 변환
-    let ageCode = '';
-    switch(state.age) {
-        case '10': ageCode = '20'; break; // 10대는 20대 초반과 동일하게 처리
-        case '20e': ageCode = '20'; break;
-        case '20m': ageCode = '25'; break;
-        case '20l': ageCode = '25'; break; // 20대 후반은 20대 중반과 동일하게 처리
-        case '30': ageCode = '25'; break; // 30대 이상은 20대 중반과 동일하게 처리
-        default: ageCode = '20';
-    }
+    // 데이터 파일의 조합 키 구조에 맞게 매핑
+    // 10F_D, 20F_D, 20eF_R, 20mF_D, 20lF_D, 25F_C, 30M_R 등
+    
+    let ageCode = state.age;
+    
+    // 20대 세분화 매핑
+    if (state.age === '20e') ageCode = '20e';
+    else if (state.age === '20m') ageCode = '20m';
+    else if (state.age === '20l') ageCode = '20l';
     
     return `${ageCode}${state.gender}_${state.personality}`;
+}
+
+// ========== 폴백 조합 키 생성 (데이터가 없을 경우) ==========
+function getFallbackCombinationKey() {
+    // 데이터에 없는 조합은 기본 20대 키로 폴백
+    return `20${state.gender}_${state.personality}`;
 }
 
 // ========== 테스트 선택 ==========
@@ -337,7 +342,7 @@ async function startTest(testType) {
     // JSON 데이터 로드
     if (!questionData) {
         try {
-            const response = await fetch('data/questions-priority.json');
+            const response = await fetch('data/questions-expanded.json');
             questionData = await response.json();
         } catch (error) {
             console.error('데이터 로드 실패:', error);
@@ -345,15 +350,21 @@ async function startTest(testType) {
             return;
         }
     }
-    
+
     // 조합 키 생성
     const comboKey = getCombinationKey();
     
-    // 해당 조합의 질문 로드
+    // 해당 조합의 질문 로드 (없으면 폴백)
     if (questionData.combinations[comboKey] && questionData.combinations[comboKey][testType]) {
         currentQuestions = questionData.combinations[comboKey][testType];
+    } else if (questionData.combinations[getFallbackCombinationKey()] && questionData.combinations[getFallbackCombinationKey()][testType]) {
+        // 폴백: 기본 20대 조합 사용
+        const fallbackKey = getFallbackCombinationKey();
+        console.log('폴백 사용:', comboKey, '→', fallbackKey);
+        currentQuestions = questionData.combinations[fallbackKey][testType];
     } else {
-        // 데이터가 없으면 기본 데이터 사용 (20F_D 사용)
+        // 최종 폴백: 20F_D 사용
+        console.log('최종 폴백 사용:', comboKey, '→ 20F_D');
         currentQuestions = questionData.combinations['20F_D'][testType];
     }
     
