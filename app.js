@@ -342,7 +342,7 @@ async function startTest(testType) {
     // JSON 데이터 로드
     if (!questionData) {
         try {
-            const response = await fetch('data/questions-v3.json');
+            const response = await fetch('data/questions-v4.json');
             questionData = await response.json();
         } catch (error) {
             console.error('데이터 로드 실패:', error);
