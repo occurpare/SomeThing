@@ -363,9 +363,17 @@ async function startTest(testType) {
         console.log('폴백 사용:', comboKey, '→', fallbackKey);
         currentQuestions = questionData.combinations[fallbackKey][testType];
     } else {
-        // 최종 폴백: 20F_D 사용
-        console.log('최종 폴백 사용:', comboKey, '→ 20F_D');
-        currentQuestions = questionData.combinations['20F_D'][testType];
+        // 최종 폴백: 유효한 조합 찾기
+        const availableKeys = Object.keys(questionData.combinations);
+        const validKey = availableKeys.find(k => questionData.combinations[k][testType]);
+        if (validKey) {
+            console.log('최종 폴백 사용:', comboKey, '→', validKey);
+            currentQuestions = questionData.combinations[validKey][testType];
+        } else {
+            console.error('오류: 사용 가능한 테스트 데이터가 없습니다');
+            alert('테스트 데이터를 불러올 수 없습니다. 다시 시도해주세요.');
+            return;
+        }
     }
     
     // 테스트 제목 설정
