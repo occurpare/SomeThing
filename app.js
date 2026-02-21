@@ -323,8 +323,9 @@ function getCombinationKey() {
 
 // ========== 폴백 조합 키 생성 (데이터가 없을 경우) ==========
 function getFallbackCombinationKey() {
-    // 데이터에 없는 조합은 기본 20대 키로 폴백
-    return `20${state.gender}_${state.personality}`;
+    // v4 데이터에는 20e/20m/20l 세분화만 있음
+    // 중간값인 20m(20대중반)으로 폴백
+    return `20m${state.gender}_${state.personality}`;
 }
 
 // ========== 테스트 선택 ==========
@@ -390,13 +391,31 @@ async function startTest(testType) {
 }
 
 function showTestQuestion(index) {
+    if (!currentQuestions || !Array.isArray(currentQuestions) || currentQuestions.length === 0) {
+        console.error('오류: 질문 데이터가 없습니다');
+        alert('테스트 데이터를 불러올 수 없습니다. 다시 시도해주세요.');
+        showPage('test-select');
+        return;
+    }
+    
     const q = currentQuestions[index];
+    if (!q) {
+        console.error('오류: 유효하지 않은 질문 인덱스:', index);
+        finishTest();
+        return;
+    }
+    
     document.getElementById('tq-current').textContent = index + 1;
     document.getElementById('tq-question').textContent = q.text;
     updateProgress('tq-progress-fill', index, currentQuestions.length);
     
     const optionsContainer = document.getElementById('tq-options');
     optionsContainer.innerHTML = '';
+    
+    if (!q.options || !Array.isArray(q.options)) {
+        console.error('오류: 질문 옵션이 없습니다', q);
+        return;
+    }
     
     q.options.forEach((opt) => {
         const btn = document.createElement('button');
