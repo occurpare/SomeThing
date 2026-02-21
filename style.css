@@ -596,3 +596,139 @@ body {
 
 /* ========== Utility Classes ========== */
 .hidden { display: none !important; }
+
+/* ========== Age & Gender Selection Cards with Dividers ========== */
+.age-cards,
+.gender-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 4px;
+}
+
+.age-card,
+.gender-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-bottom: none;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.age-card:first-child,
+.gender-card:first-child {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.age-card:last-child,
+.gender-card:last-child {
+  border-bottom: 2px solid var(--border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.age-card:hover,
+.gender-card:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.age-card.selected,
+.gender-card.selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.age-card.selected .age-card-title,
+.gender-card.selected .gender-card-title {
+  color: white;
+}
+
+.age-card.selected .age-card-desc,
+.gender-card.selected .gender-card-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Divider line between cards */
+.age-card::after,
+.gender-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: var(--border);
+}
+
+.age-card:last-child::after,
+.gender-card:last-child::after {
+  display: none;
+}
+
+.age-card.selected::after,
+.gender-card.selected::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.age-card-icon,
+.gender-card-icon {
+  font-size: 32px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.age-card.selected .age-card-icon,
+.gender-card.selected .gender-card-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.age-card-content,
+.gender-card-content {
+  flex: 1;
+}
+
+.age-card-title,
+.gender-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.age-card-desc {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* Selected indicator */
+.age-card.selected::before,
+.gender-card.selected::before {
+  content: '✓';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
