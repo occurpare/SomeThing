@@ -531,6 +531,16 @@ body {
   color: var(--primary);
 }
 
+/* 유형 결과 표시 시 퍼센트 숨김 */
+.type-result .result-percentage {
+  display: none;
+}
+
+.type-result .result-level {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
 .result-box {
   background: var(--primary-light);
   border-radius: var(--radius-lg);

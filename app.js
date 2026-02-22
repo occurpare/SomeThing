@@ -167,26 +167,54 @@ const personalityQuestions = [
 ];
 
 // ========== 결과 레벨 정의 ==========
+// ========== 결과 레벨 정의 (6단계 세분화) ==========
 const resultLevels = {
-    high: {
-        min: 70,
+    veryHigh: {
+        min: 76,
         max: 100,
         name: '높음',
-        desc: '매우 긍정적인 신호예요! 지금의 감정과 상황을 잘 이어가보세요.',
+        desc: '매우 긍정적인 신호예요! 지금의 감정이 진짜라면 과감하게 나아가보세요.',
+        advice: '이 감정을 소중히 여기세요. 상대에게도 진심을 표현해보는 건 어떨까요?',
         color: '#FF6B6B'
     },
+    high: {
+        min: 56,
+        max: 75,
+        name: '양호',
+        desc: '꽤 좋은 신호예요. 상호작용이 잘 이루어지고 있어요.',
+        advice: '지금의 흐름을 유지하며 서로를 더 알아가보세요!',
+        color: '#FF8E8E'
+    },
     medium: {
-        min: 40,
-        max: 69,
+        min: 46,
+        max: 55,
         name: '중간',
         desc: '양호한 가능성이 있어요. 조금 더 지켜보며 서로를 알아가보세요.',
+        advice: '더 많은 대화를 나누며 관계를 깊게 만들어보세요.',
         color: '#4ECDC4'
     },
+    lowMedium: {
+        min: 31,
+        max: 45,
+        name: '약간 낮음',
+        desc: '아직은 미지수예요. 친구로서 더 알아가는 시간이 필요해요.',
+        advice: '서두르지 말고 자연스러운 만남을 이어가보세요.',
+        color: '#95A5A6'
+    },
     low: {
-        min: 0,
-        max: 39,
+        min: 16,
+        max: 30,
         name: '낮음',
+        desc: '지금은 친구 느낌이 더 강해요. 서두르지 않는 게 좋겠어요.',
+        advice: '편하게 지내면서 상대의 진심을 조금 더 지켜보세요.',
+        color: '#BDC3C7'
+    },
+    veryLow: {
+        min: 0,
+        max: 15,
+        name: '매우 낮음',
         desc: '아직은 친구로 지내는 게 좋을 수도 있어요. 서두르지 마세요.',
+        advice: '지금은 인연이 아닐 수 있어요. 다른 기회를 기다려보세요.',
         color: '#A8A8A8'
     }
 };
@@ -544,14 +572,20 @@ function finishTest() {
     const maxScore = currentQuestions.length * 10;
     const percentage = Math.round((state.totalScore / maxScore) * 100);
     
-    // 레벨 결정
+    // 레벨 결정 (6단계)
     let level;
-    if (percentage >= 70) {
+    if (percentage >= 76) {
+        level = resultLevels.veryHigh;
+    } else if (percentage >= 56) {
         level = resultLevels.high;
-    } else if (percentage >= 40) {
+    } else if (percentage >= 46) {
         level = resultLevels.medium;
-    } else {
+    } else if (percentage >= 31) {
+        level = resultLevels.lowMedium;
+    } else if (percentage >= 16) {
         level = resultLevels.low;
+    } else {
+        level = resultLevels.veryLow;
     }
     
     // 결과 표시
@@ -564,6 +598,11 @@ function finishTest() {
     levelEl.textContent = level.name;
     levelEl.style.color = level.color;
     levelEl.style.display = 'block';
+    levelEl.style.fontSize = '';
+    levelEl.style.fontWeight = '';
+    
+    // 유형 결과 클래스 제거 (퍼센트 테스트는 기본 스타일)
+    document.querySelector('#result .result-content').classList.remove('type-result');
     
     // 테스트 타입별 제목
     const testTypeNames = {
@@ -625,6 +664,9 @@ function finishTypeTest() {
     };
     document.getElementById('r-test-type').textContent = testTypeNames[state.testType] + ' 결과';
     document.getElementById('r-summary').textContent = typeData.desc;
+    
+    // 유형 결과 클래스 추가 (퍼센트 숨김)
+    document.querySelector('#result .result-content').classList.add('type-result');
     
     // 성향 정보
     const pType = personalityTypes[state.personality];
