@@ -24,20 +24,20 @@
     <meta property="twitter:image" content="https://occurpare.github.io/SomeThing/images/og-image.png">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://occurpare.github.io/SomeThing">
-    
+
     <title>SomeThing - 99% 정확한 썸 판별 테스트 | 연애 심리 테스트</title>
-    
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;💕&lt;/text&gt;&lt;/svg&gt;">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Google Analytics (추천 추가) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
@@ -46,7 +46,7 @@
         gtag('js', new Date());
         gtag('config', 'GA_MEASUREMENT_ID');
     </script>
-    
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -75,7 +75,7 @@
         "keywords": "썸씽, SomeThing, 썸 테스트, 연애 테스트, 심리 테스트"
     }
     </script>
-    
+
     <!-- Organization Structured Data -->
     <script type="application/ld+json">
     {
@@ -101,7 +101,7 @@
                     <p class="tagline">나의 연애 성향을 알아보고</p>
                     <p class="sub-tagline">썸·내 마음·상대 마음·연애 스타일·이상형 테스트</p>
                 </div>
-                
+
                 <div class="feature-list">
                     <div class="feature-item">
                         <span class="feature-icon">🔥</span>
@@ -128,12 +128,12 @@
                         <span class="feature-text">이상형 찾기</span>
                     </div>
                 </div>
-                
+
                 <button class="btn btn-primary btn-large" onclick="startApp()">
                     <span class="btn-text">테스트 시작하기</span>
                     <span class="btn-arrow">→</span>
                 </button>
-                
+
                 <p class="test-meta">⏱️ 약 3분 소요 · 맞춤형 질문</p>
             </div>
         </section>
@@ -144,10 +144,10 @@
                 <button class="btn-back" onclick="goToLanding()">←</button>
                 <h2 class="page-title">나이를 선택해주세요</h2>
             </div>
-            
+
             <div class="select-content">
                 <p class="select-hint">현재 연령대를 선택하면<br>맞춤형 질문을 제공해드려요</p>
-                
+
                 <div class="age-cards">
                     <div class="age-card" onclick="selectAge('10')">
                         <div class="age-card-icon">🎒</div>
@@ -156,7 +156,7 @@
                             <p class="age-card-desc">중·고등학생</p>
                         </div>
                     </div>
-                    
+
                     <div class="age-card" onclick="selectAge('20e')">
                         <div class="age-card-icon">🎓</div>
                         <div class="age-card-content">
@@ -164,7 +164,7 @@
                             <p class="age-card-desc">20~22세</p>
                         </div>
                     </div>
-                    
+
                     <div class="age-card" onclick="selectAge('20m')">
                         <div class="age-card-icon">💼</div>
                         <div class="age-card-content">
@@ -172,7 +172,7 @@
                             <p class="age-card-desc">23~26세</p>
                         </div>
                     </div>
-                    
+
                     <div class="age-card" onclick="selectAge('20l')">
                         <div class="age-card-icon">🎯</div>
                         <div class="age-card-content">
@@ -180,7 +180,7 @@
                             <p class="age-card-desc">27~29세</p>
                         </div>
                     </div>
-                    
+
                     <div class="age-card" onclick="selectAge('30')">
                         <div class="age-card-icon">🏠</div>
                         <div class="age-card-content">
@@ -198,10 +198,10 @@
                 <button class="btn-back" onclick="goToAgeSelect()">←</button>
                 <h2 class="page-title">성별을 선택해주세요</h2>
             </div>
-            
+
             <div class="select-content">
                 <p class="select-hint">성별에 따라<br>다른 질문이 제공됩니다</p>
-                
+
                 <div class="gender-cards">
                     <div class="gender-card" onclick="selectGender('F')">
                         <div class="gender-card-icon">👩</div>
@@ -209,7 +209,7 @@
                             <h3 class="gender-card-title">여성</h3>
                         </div>
                     </div>
-                    
+
                     <div class="gender-card" onclick="selectGender('M')">
                         <div class="gender-card-icon">👨</div>
                         <div class="gender-card-content">
@@ -226,7 +226,7 @@
                 <button class="btn-back" onclick="goToGenderSelect()">←</button>
                 <h2 class="page-title">연애 성향 테스트</h2>
             </div>
-            
+
             <div class="progress-section">
                 <div class="progress-bar">
                     <div class="progress-fill" id="p-progress-fill"></div>
@@ -235,7 +235,7 @@
                     <span id="p-current">1</span> / <span id="p-total">10</span>
                 </div>
             </div>
-            
+
             <div class="question-section">
                 <p class="question-text" id="p-question"></p>
                 <div class="options-container" id="p-options"></div>
@@ -248,29 +248,29 @@
                 <div class="type-badge">
                     <span class="type-icon" id="pr-icon">🔥</span>
                 </div>
-                
+
                 <h2 class="result-title">
                     당신은 <span id="pr-type-name">직진파</span>!
                 </h2>
-                
+
                 <p class="result-description" id="pr-type-desc"></p>
-                
+
                 <div class="type-characteristics">
                     <h3>주요 특징</h3>
                     <ul id="pr-traits"></ul>
                 </div>
-                
+
                 <div class="combination-info">
                     <p class="combo-text" id="pr-combo"></p>
                 </div>
-                
+
                 <div class="next-hint">
                     <div class="hint-box">
                         <span class="hint-icon">💡</span>
                         <p class="hint-text">성향에 맞춰 다양한 테스트를 진행해보세요!</p>
                     </div>
                 </div>
-                
+
                 <button class="btn btn-primary btn-large" onclick="goToTestSelect()">
                     테스트 선택하기
                     <span class="btn-arrow">→</span>
@@ -284,10 +284,10 @@
                 <button class="btn-back" onclick="goToPersonalityResult()">←</button>
                 <h2 class="page-title">어떤 테스트를 할까요?</h2>
             </div>
-            
+
             <div class="test-select-content">
                 <p class="select-hint">원하는 테스트를 선택하고 진행해보세요</p>
-                
+
                 <div class="test-cards">
                     <div class="test-card" onclick="startTest('sum')">
                         <div class="test-card-icon">💕</div>
@@ -295,28 +295,28 @@
                         <p class="test-card-desc">우리는 지금 무슨 사이? 썸인지 확인해보세요</p>
                         <span class="test-card-count">20문항</span>
                     </div>
-                    
+
                     <div class="test-card" onclick="startTest('self')">
                         <div class="test-card-icon">💘</div>
                         <h3 class="test-card-title">내 마음 테스트</h3>
                         <p class="test-card-desc">나는 정말 좋아하는 걸까? 내 마음을 진단해보세요</p>
                         <span class="test-card-count">20문항</span>
                     </div>
-                    
+
                     <div class="test-card" onclick="startTest('other')">
                         <div class="test-card-icon">👀</div>
                         <h3 class="test-card-title">상대 마음 테스트</h3>
                         <p class="test-card-desc">걔 나 좋아하나? 상대의 마음을 알아보세요</p>
                         <span class="test-card-count">20문항</span>
                     </div>
-                    
+
                     <div class="test-card" onclick="startTest('style')">
                         <div class="test-card-icon">💑</div>
                         <h3 class="test-card-title">연애 스타일 테스트</h3>
                         <p class="test-card-desc">우리 연애는 어떤 스타일? 지금 연애 중이라면</p>
                         <span class="test-card-count">20문항</span>
                     </div>
-                    
+
                     <div class="test-card" onclick="startTest('ideal')">
                         <div class="test-card-icon">✨</div>
                         <h3 class="test-card-title">이상형 테스트</h3>
@@ -333,7 +333,7 @@
                 <button class="btn-back" onclick="goToTestSelect()">←</button>
                 <h2 class="page-title" id="tq-title">테스트</h2>
             </div>
-            
+
             <div class="progress-section">
                 <div class="progress-bar">
                     <div class="progress-fill" id="tq-progress-fill"></div>
@@ -342,7 +342,7 @@
                     <span id="tq-current">1</span> / <span id="tq-total">5</span>
                 </div>
             </div>
-            
+
             <div class="question-section">
                 <p class="question-text" id="tq-question"></p>
                 <div class="options-container" id="tq-options"></div>
@@ -359,12 +359,12 @@
                     </div>
                     <div class="result-level" id="r-level">확인 중...</div>
                 </div>
-                
+
                 <div class="result-box">
                     <h3 class="result-box-title" id="r-test-type">테스트 결과</h3>
                     <p class="result-summary" id="r-summary"></p>
                 </div>
-                
+
                 <div class="personality-info-box">
                     <h3 class="box-title">나의 연애 성향</h3>
                     <div class="personality-type">
@@ -374,13 +374,13 @@
                     <p class="p-combo" id="r-combo"></p>
                     <p class="p-advice" id="r-p-advice"></p>
                 </div>
-                
+
                 <div class="result-actions">
                     <button class="btn btn-secondary" onclick="restartApp()">
                         <span>🏠</span>
                         처음으로
                     </button>
-                    
+
                     <button class="btn btn-primary" onclick="goToTestSelect()">
                         <span>🔄</span>
                         다른 테스트하기
@@ -408,11 +408,8 @@
     </footer>
 
     <script src="app.js"></script>
-    
-    <!-- Optional: Google AdSense Script (AdSense 승인 후 활성화) -->
-    <!-- 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-         crossorigin="anonymous"></script>
-    -->
+
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8338381135417557" crossorigin="anonymous"></script>
 </body>
 </html>
