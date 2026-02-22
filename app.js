@@ -353,7 +353,7 @@ async function startTest(testType) {
     // JSON 데이터 로드
     if (!questionData) {
         try {
-            const response = await fetch('data/questions-v19.json?t=' + Date.now());
+            const response = await fetch('data/questions-v20.json?t=' + Date.now());
             questionData = await response.json();
         } catch (error) {
             console.error('데이터 로드 실패:', error);
@@ -395,7 +395,9 @@ async function startTest(testType) {
     const testTitles = {
         'sum': '썸 테스트',
         'self': '내 마음 테스트',
-        'other': '상대 마음 테스트'
+        'other': '상대 마음 테스트',
+        'style': '연애 스타일 테스트',
+        'ideal': '이상형 테스트'
     };
     document.getElementById('tq-title').textContent = testTitles[testType];
     document.getElementById('tq-total').textContent = currentQuestions.length;
@@ -479,7 +481,9 @@ function finishTest() {
     const testTypeNames = {
         'sum': '썸 테스트',
         'self': '내 마음 테스트',
-        'other': '상대 마음 테스트'
+        'other': '상대 마음 테스트',
+        'style': '연애 스타일 테스트',
+        'ideal': '이상형 테스트'
     };
     document.getElementById('r-test-type').textContent = testTypeNames[state.testType] + ' 결과';
     document.getElementById('r-summary').textContent = level.desc;
