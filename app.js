@@ -16,6 +16,16 @@ const state = {
 let questionData = null;
 let currentQuestions = [];
 
+// ========== 유틸리티 함수 ==========
+function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
 // ========== 성향 타입 정의 ==========
 const personalityTypes = {
     D: {
@@ -356,26 +366,30 @@ async function startTest(testType) {
     const comboKey = getCombinationKey();
     
     // 해당 조합의 질문 로드 (없으면 폴백)
+    let allQuestions = [];
     if (questionData.combinations[comboKey] && questionData.combinations[comboKey][testType]) {
-        currentQuestions = questionData.combinations[comboKey][testType];
+        allQuestions = questionData.combinations[comboKey][testType];
     } else if (questionData.combinations[getFallbackCombinationKey()] && questionData.combinations[getFallbackCombinationKey()][testType]) {
         // 폴백: 기본 20대 조합 사용
         const fallbackKey = getFallbackCombinationKey();
         console.log('폴백 사용:', comboKey, '→', fallbackKey);
-        currentQuestions = questionData.combinations[fallbackKey][testType];
+        allQuestions = questionData.combinations[fallbackKey][testType];
     } else {
         // 최종 폴백: 유효한 조합 찾기
         const availableKeys = Object.keys(questionData.combinations);
         const validKey = availableKeys.find(k => questionData.combinations[k][testType]);
         if (validKey) {
             console.log('최종 폴백 사용:', comboKey, '→', validKey);
-            currentQuestions = questionData.combinations[validKey][testType];
+            allQuestions = questionData.combinations[validKey][testType];
         } else {
             console.error('오류: 사용 가능한 테스트 데이터가 없습니다');
             alert('테스트 데이터를 불러올 수 없습니다. 다시 시도해주세요.');
             return;
         }
     }
+    
+    // 랜덤으로 20개 선택 (100개 중)
+    currentQuestions = shuffleArray(allQuestions).slice(0, 20);
     
     // 테스트 제목 설정
     const testTitles = {
