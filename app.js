@@ -191,6 +191,86 @@ const resultLevels = {
     }
 };
 
+// ========== 연애 스타일 결과 유형 ==========
+const styleTypes = {
+    clingy: {
+        name: '밀착형',
+        icon: '🤗',
+        desc: '서로 붙어있는 걸 좋아하는 스타일이에요. 연락도 자주하고 함께 보내는 시간이 많아요.',
+        advice: '서로에 대한 애정이 크지만, 각자의 시간도 존중해주면 더 오래갈 수 있어요!'
+    },
+    independent: {
+        name: '독립형',
+        icon: '🦅',
+        desc: '자유롭게 서로의 시간을 존중하는 스타일이에요. 신뢰를 기반으로 해요.',
+        advice: '각자의 시간을 잘 지키는 만큼, 함께할 때 더 특별하게 만들어보세요!'
+    },
+    planned: {
+        name: '계획형',
+        icon: '📅',
+        desc: '데이트를 미리 계획하고 체계적으로 진행하는 스타일이에요.',
+        advice: '계획도 좋지만 때로는 즉흥적인 데이트도 즐겨보세요!'
+    },
+    spontaneous: {
+        name: '자유형',
+        icon: '🎈',
+        desc: '즉흥적이고 유쾌한 데이트를 추구하는 스타일이에요.',
+        advice: '즉흥적인 즐거움도 좋지만 중요한 약속은 꼭 지켜주세요!'
+    },
+    communicative: {
+        name: '소통형',
+        icon: '💬',
+        desc: '대화를 중요하게 생각하고 서로의 마음을 털어놓는 스타일이에요.',
+        advice: '좋은 대화가 관계를 깊게 만드는군요. 계속해서 서로를 알아가세요!'
+    },
+    supportive: {
+        name: '서포트형',
+        icon: '🤝',
+        desc: '서로의 성장을 지지하고 응원해주는 스타일이에요.',
+        advice: '서로를 지지하는 힘이 관계를 더 단단하게 만들어요!'
+    }
+};
+
+// ========== 이상형 결과 유형 ==========
+const idealTypes = {
+    leader: {
+        name: '리더형',
+        icon: '👑',
+        desc: '듬직하게 리드해주는 사람이 이상형이에요.',
+        advice: '리드해주는 사람과 함께하면 든든할 거예요!'
+    },
+    supporter: {
+        name: '서포터형',
+        icon: '🌟',
+        desc: '뒤에서 응원해주는 따뜻한 사람이 이상형이에요.',
+        advice: '서로 지지하는 관계는 오래갈 수 있어요!'
+    },
+    companion: {
+        name: '동반자형',
+        icon: '🚶',
+        desc: '함께 성장하는 평등한 관계를 원해요.',
+        advice: '서로의 페이스를 존중하며 함께 가는 관계가 좋겠네요!'
+    },
+    funny: {
+        name: '재미있는형',
+        icon: '😄',
+        desc: '유머감각 좋고 즐거운 사람이 이상형이에요.',
+        advice: '웃음이 있는 관계는 스트레스도 덜할 거예요!'
+    },
+    sincere: {
+        name: '성실형',
+        icon: '💎',
+        desc: '책임감 있고 신뢰할 수 있는 사람이 이상형이에요.',
+        advice: '신뢰를 바탕으로 한 관계가 가장 중요하죠!'
+    },
+    empathetic: {
+        name: '공감형',
+        icon: '💝',
+        desc: '마음을 잘 알아주고 공감해주는 사람이 이상형이에요.',
+        advice: '마음이 통하는 사람과 함께하면 행복할 거예요!'
+    }
+};
+
 // ========== 페이지 전환 ==========
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -455,6 +535,12 @@ function handleTestAnswer(questionIndex, score) {
 
 // ========== 테스트 결과 계산 ==========
 function finishTest() {
+    // style, ideal 테스트는 유형 결과로 표시
+    if (state.testType === 'style' || state.testType === 'ideal') {
+        finishTypeTest();
+        return;
+    }
+    
     const maxScore = currentQuestions.length * 10;
     const percentage = Math.round((state.totalScore / maxScore) * 100);
     
@@ -472,10 +558,12 @@ function finishTest() {
     const percentageEl = document.getElementById('r-percentage');
     percentageEl.textContent = percentage;
     percentageEl.style.color = level.color;
+    percentageEl.style.display = 'block';
     
     const levelEl = document.getElementById('r-level');
     levelEl.textContent = level.name;
     levelEl.style.color = level.color;
+    levelEl.style.display = 'block';
     
     // 테스트 타입별 제목
     const testTypeNames = {
@@ -497,6 +585,56 @@ function finishTest() {
     const comboKey = getCombinationKey();
     document.getElementById('r-combo').textContent = `조합: ${comboKey}`;
     document.getElementById('r-p-advice').textContent = '💡 ' + pType.advice;
+    
+    showPage('result');
+}
+
+// ========== 유형 테스트 결과 (style, ideal) ==========
+function finishTypeTest() {
+    const totalScore = state.totalScore;
+    const maxScore = currentQuestions.length * 10;
+    const percentage = Math.round((totalScore / maxScore) * 100);
+    
+    // 점수 구간에 따른 유형 결정
+    let resultType;
+    const types = state.testType === 'style' 
+        ? ['clingy', 'independent', 'planned', 'spontaneous', 'communicative', 'supportive']
+        : ['leader', 'supporter', 'companion', 'funny', 'sincere', 'empathetic'];
+    
+    // 점수 구간별 유형 매핑 (6구간)
+    const typeIndex = Math.min(Math.floor(percentage / 17), 5); // 0-16, 17-33, 34-50, 51-67, 68-84, 85-100
+    resultType = types[typeIndex];
+    
+    const typeData = state.testType === 'style' ? styleTypes[resultType] : idealTypes[resultType];
+    
+    // 퍼센트 숨기고 유형 표시
+    const percentageEl = document.getElementById('r-percentage');
+    percentageEl.style.display = 'none';
+    
+    const levelEl = document.getElementById('r-level');
+    levelEl.textContent = typeData.name;
+    levelEl.style.color = state.testType === 'style' ? '#FF6B6B' : '#9B59B6';
+    levelEl.style.display = 'block';
+    levelEl.style.fontSize = '32px';
+    levelEl.style.fontWeight = '700';
+    
+    // 테스트 타입별 제목
+    const testTypeNames = {
+        'style': '연애 스타일 테스트',
+        'ideal': '이상형 테스트'
+    };
+    document.getElementById('r-test-type').textContent = testTypeNames[state.testType] + ' 결과';
+    document.getElementById('r-summary').textContent = typeData.desc;
+    
+    // 성향 정보
+    const pType = personalityTypes[state.personality];
+    document.getElementById('r-p-icon').textContent = typeData.icon;
+    document.getElementById('r-p-name').textContent = `${pType.label} (${pType.name})`;
+    
+    // 조합 정보
+    const comboKey = getCombinationKey();
+    document.getElementById('r-combo').textContent = `조합: ${comboKey}`;
+    document.getElementById('r-p-advice').textContent = '💡 ' + typeData.advice;
     
     showPage('result');
 }
