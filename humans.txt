@@ -1,0 +1,24 @@
+/* TEAM */
+Developer: SomeThing Lab
+Location: South Korea
+
+/* SITE */
+Last update: 2026-02-23
+Language: Korean
+Standards: HTML5, CSS3, ES6+
+Components: Google Analytics (optional), Google AdSense (pending)
+Software: VS Code, Git, GitHub Pages
+
+/* THANKS */
+Name: Couples seeking to understand their relationship status
+
+/* META */
+Theme: Love Psychology Test
+Color: #FF6B6B (Pink Red), #4ECDC4 (Teal), #FFD93D (Yellow)
+
+/* LICENSE */
+Copyright (c) 2026 SomeThing Lab
+All rights reserved.
+
+/* CONTACT */
+Email: contact@something-test.com

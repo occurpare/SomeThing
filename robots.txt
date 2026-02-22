@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://occurpare.github.io/SomeThing/sitemap.xml
+
+# Crawl rate (optional)
+Crawl-delay: 1
+
+# Disallow specific patterns
+Disallow: /404.html
+Disallow: /500.html
+
+# Allow social media crawlers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Ads.txt location
+# https://occurpare.github.io/SomeThing/ads.txt

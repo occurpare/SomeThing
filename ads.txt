@@ -1,0 +1,8 @@
+# Google AdSense Verification File
+# SomeThing - https://occurpare.github.io/SomeThing/
+
+# Replace with your actual AdSense Publisher ID after approval
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Example (remove when adding real ID):
+# google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0
