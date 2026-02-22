@@ -1,10 +1,11 @@
 /* TEAM */
-Developer: SomeThing Lab
+Developer: 썸씽 Lab (SomeThing Lab)
 Location: South Korea
 
 /* SITE */
 Last update: 2026-02-23
 Language: Korean
+Site Name: 썸씽 (SomeThing)
 Standards: HTML5, CSS3, ES6+
 Components: Google Analytics (optional), Google AdSense (pending)
 Software: VS Code, Git, GitHub Pages
@@ -17,8 +18,8 @@ Theme: Love Psychology Test
 Color: #FF6B6B (Pink Red), #4ECDC4 (Teal), #FFD93D (Yellow)
 
 /* LICENSE */
-Copyright (c) 2026 SomeThing Lab
+Copyright (c) 2026 썸씽 (SomeThing Lab)
 All rights reserved.
 
 /* CONTACT */
-Email: contact@something-test.com
+Email: occurpare@naver.com
