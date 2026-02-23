@@ -792,6 +792,30 @@ body {
   text-align: center;
 }
 
+/* ========== Content Article Styles for AdSense ========== */
+.content-article {
+  background: white;
+  padding: 20px;
+  margin: 16px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.1);
+  text-align: left;
+}
+
+.content-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.content-text {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
 .footer-content {
   max-width: 480px;
   margin: 0 auto;
