@@ -1,34 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <!-- Main Page -->
     <url>
         <loc>https://occurpare.github.io/SomeThing/</loc>
-        <lastmod>2026-02-23</lastmod>
+        <lastmod>2026-03-04</lastmod>
         <priority>1.00</priority>
         <changefreq>weekly</changefreq>
+    </url>
+    
+    <!-- Test Pages -->
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/index.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.95</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    
+    <!-- Blog Pages -->
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/blog/</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.90</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/blog/what-is-something.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.85</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/blog/4-love-types.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.85</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/blog/signs-of-interest.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.85</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/blog/how-to-confess.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.85</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/blog/type-compatibility.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.85</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/blog/how-to-change-type.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.85</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+    <!-- Guide Pages -->
+    <url>
+        <loc>https://occurpare.github.io/SomeThing/guide/faq.html</loc>
+        <lastmod>2026-03-04</lastmod>
+        <priority>0.80</priority>
+        <changefreq>monthly</changefreq>
     </url>
     
     <!-- Info Pages -->
     <url>
         <loc>https://occurpare.github.io/SomeThing/privacy.html</loc>
-        <lastmod>2026-02-23</lastmod>
+        <lastmod>2026-03-04</lastmod>
         <priority>0.80</priority>
         <changefreq>monthly</changefreq>
     </url>
     
     <url>
         <loc>https://occurpare.github.io/SomeThing/terms.html</loc>
-        <lastmod>2026-02-23</lastmod>
+        <lastmod>2026-03-04</lastmod>
         <priority>0.80</priority>
         <changefreq>monthly</changefreq>
     </url>
     
     <url>
         <loc>https://occurpare.github.io/SomeThing/cookies.html</loc>
-        <lastmod>2026-02-23</lastmod>
+        <lastmod>2026-03-04</lastmod>
         <priority>0.80</priority>
         <changefreq>monthly</changefreq>
     </url>
