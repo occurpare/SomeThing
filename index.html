@@ -38,13 +38,30 @@
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Analytics (추천 추가) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SOMETHING2026"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag('config', 'G-SOMETHING2026');
+        
+        // 이벤트 추적 함수
+        function trackTestComplete(testType) {
+            gtag('event', 'test_completed', {
+                'event_category': 'engagement',
+                'event_label': testType,
+                'value': 1
+            });
+        }
+        
+        function trackBlogRead(blogTitle) {
+            gtag('event', 'blog_read', {
+                'event_category': 'engagement',
+                'event_label': blogTitle,
+                'value': 1
+            });
+        }
     </script>
 
     <!-- JSON-LD Structured Data -->
@@ -419,6 +436,20 @@
     <!-- Footer with Policy Links -->
     <footer class="site-footer">
         <div class="footer-content">
+            <!-- SNS Share -->
+            <div class="social-share" style="margin-bottom: 1rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: #a0a0a0; margin-bottom: 0.5rem;">친구와 공유하기</p>
+                <button onclick="shareToKakao()" style="background: #FEE500; color: #3C1E1E; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin: 0 0.25rem; font-weight: 600;">
+                    💛 카카오톡
+                </button>
+                <button onclick="shareToTwitter()" style="background: #1DA1F2; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin: 0 0.25rem; font-weight: 600;">
+                    🐦 트위터
+                </button>
+                <button onclick="shareToFacebook()" style="background: #1877F2; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin: 0 0.25rem; font-weight: 600;">
+                    👤 페이스북
+                </button>
+            </div>
+            
             <div class="footer-links">
                 <a href="privacy.html" class="footer-link">🔒 개인정보처리방침</a>
                 <span class="footer-separator">|</span>
@@ -432,6 +463,26 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // SNS 공유 함수
+        function shareToKakao() {
+            const url = encodeURIComponent('https://occurpare.github.io/SomeThing');
+            const text = encodeURIComponent('연애 심리 테스트 - 나의 연애 스타일은?');
+            window.open(`https://kakaolink.com/send?url=${url}&text=${text}`, '_blank');
+        }
+        
+        function shareToTwitter() {
+            const url = encodeURIComponent('https://occurpare.github.io/SomeThing');
+            const text = encodeURIComponent('연애 심리 테스트 - 나의 연애 스타일은?');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        
+        function shareToFacebook() {
+            const url = encodeURIComponent('https://occurpare.github.io/SomeThing');
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+    </script>
 
     <script src="app.js"></script>
 </body>
